@@ -1,0 +1,15 @@
+@import "src/constants/variables.scss";
+
+.main {
+  width: 90%;
+  min-height: 400px;
+  border-radius: 6px;
+  background-color: white;
+  color: $text-primary;
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
