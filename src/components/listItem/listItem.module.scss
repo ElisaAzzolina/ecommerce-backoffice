@@ -1,0 +1,25 @@
+@import "src/constants/variables.scss";
+
+.main {
+  display: flex;
+  gap: 10px;
+  transition: all 0.4s;
+  &:hover {
+    background-color: $background-primary;
+    padding: 6px 0;
+  }
+  .icon {
+    color: $title-primary;
+    transition: all 0.2s;
+    &:hover {
+      color: $background-secondary;
+    }
+  }
+  .label {
+    color: $title-primary;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
