@@ -1,8 +1,8 @@
 import listItem from "./listItem.module.scss";
 
-function ListItem({ label, icon }) {
+function ListItem({ label, icon, setRoute, routeUrl }) {
   return (
-    <li className={listItem.main}>
+    <li onClick={() => setRoute(routeUrl)} className={listItem.main}>
       <span className={listItem.icon}>{icon}</span>
       <span className={listItem.label}>{label}</span>
     </li>
