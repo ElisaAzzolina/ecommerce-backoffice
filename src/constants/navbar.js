@@ -20,7 +20,7 @@ export const navBarLinks = [
   {
     id: 3,
     label: "Prodotti",
-    route: "Products",
+    route: "products",
     icon: <AiFillShopping />,
   },
   {

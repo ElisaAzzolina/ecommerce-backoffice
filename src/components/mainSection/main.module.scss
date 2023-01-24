@@ -8,6 +8,7 @@
   align-items: space-between;
   gap: 20px;
   font-family: $font-primary;
+  background-color: $background-primary;
   .sxColumn {
     width: 40%;
     height: calc(100vh - $header-height);
@@ -21,5 +22,7 @@
     width: 100%;
     height: calc(100vh - $header-height);
     padding-top: 10px;
+    background-color: $background-primary;
+    overflow-y: scroll;
   }
 }
