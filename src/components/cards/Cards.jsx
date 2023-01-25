@@ -1,7 +1,9 @@
 import Loading from "../loading/Loading";
 import cards from "./cards.module.scss";
+import DeleteButton from "../deleteButton/DeleteButton";
+import EditButton from "../editButton/EditButton";
 
-function Cards({ catState, loading }) {
+function Cards({ catState, getData, loading }) {
   return (
     <div className={cards.main}>
       {loading ? (
@@ -12,7 +14,13 @@ function Cards({ catState, loading }) {
             <div className={cards.single} key={item.id}>
               <img src={item.image} alt={item.name} className={cards.img} />
               <p className={cards.title}>{item.name.substring(0, 20)}</p>
-              <div></div>
+              <div className={cards.btns}>
+                <EditButton
+                  getData={getData}
+                  data={{ name: item.name, image: item.image, id: item.id }}
+                />
+                <DeleteButton getData={getData} id={item.id} />
+              </div>
             </div>
           ))}
         </div>
