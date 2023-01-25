@@ -1,0 +1,20 @@
+@import "src/constants/variables.scss";
+
+.main {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-family: $font-primary;
+  margin-right: 16px;
+  background-color: $title-primary;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  transition: all 0.35s;
+  &:hover {
+    font-weight: bold;
+    background-color: $background-secondary;
+    color: $title-primary;
+  }
+}
