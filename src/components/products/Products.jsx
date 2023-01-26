@@ -28,14 +28,12 @@ function Products() {
   return (
     <div className={styles.main}>
       <div className={styles.title}>
-        {showForm && (
-          <ProductForm getData={getData} setShowForm={setShowForm} />
-        )}
         <h1>Prodotti</h1>
         <button className={styles.button} onClick={() => setShowForm(true)}>
           Aggiungi Prodotto
         </button>
       </div>
+      {showForm && <ProductForm getData={getData} setShowForm={setShowForm} />}
       <div className={styles.cards}>
         <ProductCards
           productState={productState.products}

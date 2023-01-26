@@ -1,0 +1,36 @@
+@import "src/constants/variables.scss";
+
+.main {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 30px;
+  justify-content: space-around;
+}
+
+.inputField {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: inset rgba(0, 0, 0, 0.12) 0px 1px 3px, #0000003d 0px 1px 2px;
+}
+
+.btn {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  font-family: $font-primary;
+  margin-right: 16px;
+  background-color: $title-primary;
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.35s;
+  &:hover {
+    font-weight: bold;
+    background-color: $background-secondary;
+    color: $title-primary;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+}
