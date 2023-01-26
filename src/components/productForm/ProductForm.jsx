@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { POST, PUT } from "../../utils/http";
 import styles from "./styles.module.scss";
 
-function ProductForm({ getData, data }) {
+function ProductForm({ getData, data, setShowForm }) {
   const [edit, setEdit] = useState(false);
   const [form, setForm] = useState({
     title: "",
-    price: 0,
+    price: 1,
     description: "",
     categoryId: 1,
     images: [],
@@ -16,7 +16,7 @@ function ProductForm({ getData, data }) {
     if (data) {
       setForm({
         title: data.title,
-        price: Number(data.price),
+        price: parseInt(data.price),
         description: data.description,
         categoryId: parseInt(data.categoryId),
         images: data.images,
@@ -27,26 +27,27 @@ function ProductForm({ getData, data }) {
   }, []);
 
   const handleForm = (input, e) => {
-    if (input === "images") {
+    if (input !== "images") {
+      setForm({
+        ...form,
+        [input]: e.target.value,
+      });
+    } else {
       setForm((prev) => {
         return {
           ...prev,
-          images: [...prev.images, e.target.value],
+          [input]: [...prev.images, e.target.value],
         };
       });
-      console.log(typeof form.images);
     }
-    setForm({
-      ...form,
-      [input]: e.target.value,
-    });
   };
 
   const submitForm = (e) => {
     e.preventDefault();
-    console.log(form);
+
     POST("products", form).then((data) => {
       if (data.status === 201) {
+        setShowForm(false);
         getData();
       }
     });
@@ -57,6 +58,7 @@ function ProductForm({ getData, data }) {
     PUT("products", form, "/" + data.id).then((data) => {
       console.log(data);
       if (data.status === 200) {
+        setShowForm(false);
         getData();
       }
     });
