@@ -1,0 +1,44 @@
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.single {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 6px;
+}
+
+.images {
+  img {
+    width: 300px;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  h2,
+  p {
+    width: 300px;
+  }
+}
+
+.btns {
+  display: flex;
+  flex-direction: row;
+}
+
+.price {
+  font-weight: bold;
+}

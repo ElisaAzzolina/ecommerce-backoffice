@@ -4,7 +4,7 @@ import { DELETE } from "../../utils/http";
 
 function DeleteButton({ id, getData }) {
   const delElement = () => {
-    DELETE("categories", "/" + id).then((data) => {
+    DELETE("products", "/" + id).then((data) => {
       console.log(data);
       getData();
     });
