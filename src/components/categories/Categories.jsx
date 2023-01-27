@@ -3,6 +3,7 @@ import categories from "./categories.module.scss";
 import { GET } from "../../utils/http";
 import Cards from "../cards/Cards";
 import Modal from "../modal/Modal";
+import Title from "../title/Title";
 
 function Categories() {
   const [showModal, setShowModal] = useState(false);
@@ -29,7 +30,7 @@ function Categories() {
     <div className={categories.main}>
       <div className={categories.title}>
         {showModal && <Modal getData={getData} setShowModal={setShowModal} />}
-        <h1>Categorie</h1>
+        <Title title={"CATEGORIE"} />
         <button
           className={categories.button}
           onClick={() => setShowModal(true)}
