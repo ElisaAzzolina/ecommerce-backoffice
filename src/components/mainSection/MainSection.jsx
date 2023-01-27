@@ -3,6 +3,7 @@ import main from "./main.module.scss";
 import { useState } from "react";
 import Categories from "../categories/Categories";
 import Products from "../products/Products";
+import Home from "../home/Home";
 
 function MainSection() {
   const [route, setRoute] = useState("home");
@@ -13,7 +14,7 @@ function MainSection() {
         <Navbar setRoute={setRoute} />
       </div>
       <div className={main.dxColumn}>
-        {route === "home" && <div>home</div>}
+        {route === "home" && <Home setRoute={setRoute} />}
         {route === "categories" && <Categories />}
         {route === "products" && <Products />}
         {route === "orders" && <div>Orders</div>}
