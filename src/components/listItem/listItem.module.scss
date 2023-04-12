@@ -5,8 +5,7 @@
   gap: 10px;
   transition: all 0.4s;
   &:hover {
-    background-color: $background-primary;
-    padding: 6px 0;
+    border-bottom: 1px solid #202641;
   }
   .icon {
     color: $title-primary;
@@ -18,8 +17,5 @@
   .label {
     color: $title-primary;
     cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }

@@ -1,7 +1,6 @@
 @import "src/constants/variables.scss";
 
 .main {
-  width: 100%;
   height: calc(100vh - $header-height);
   display: flex;
   justify-content: space-between;
